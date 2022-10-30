@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Senhas em Python</title>
+    <style>
+        #btn:hover {
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-config>
+        paths = [
+            "./utils.py"
+        ]
+    </py-config>
+</head>
+<body>
+    <py-script src="password-generator.py"></py-script>
+    <py-title>Gere sua senha!</py-title>
+    <py-box widths="4/5;1/5">
+      <py-inputbox id="len_pass"></py-inputbox>
+      <py-button id="btn" label="Gerar senha">
+        from xml.dom.minidom import Element
+        len_pass = Element("len_pass")
+
+        def on_click(evt):
+            password_generator(len_pass)
+      </py-button>
+    </py-box>
+</body>
+</html>
